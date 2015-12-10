@@ -1,0 +1,1 @@
+The RedditSubmissionArchiver uses praw to access the Reddit API, and constantly consumes the stream of submissions to a given subreddit. If the submission is not a self-post, it archives (on the site Archive.is) a copy of the page linked to by the submission, and then posts a link to that archive as a comment on the submission.
