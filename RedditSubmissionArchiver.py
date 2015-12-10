@@ -5,13 +5,13 @@ import URLArchiver
 #Properties
 subredditName = "badlinguistics"
 userAgent = "BadLinguisticsBot2: v0.1 by /u/nciacrkson"
-reddit = praw.Reddit(userAgent)
+reddit = praw.Reddit(user_agent=userAgent, site_name='Chomskydoz')
 backlogOfSubmissions = 5 #The number of submissions that the bot should work through, set to at least 1
 
 #Functions
 
 #Script
-reddit.login() #TODO: Remove use of login() for better automation and because it will be deprecated soon
+reddit.refresh_access_information()
 subreddit = reddit.get_subreddit(subredditName)
 submissionStream = praw.helpers.submission_stream(reddit_session = reddit,
 												  subreddit = subreddit,
